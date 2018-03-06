@@ -12,6 +12,7 @@
 		496EA432204F309A00C2F94A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496EA430204F309A00C2F94A /* Main.storyboard */; };
 		496EA434204F309A00C2F94A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 496EA433204F309A00C2F94A /* Assets.xcassets */; };
 		496EA437204F309A00C2F94A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496EA435204F309A00C2F94A /* LaunchScreen.storyboard */; };
+		50E1C78B296A1457DDAC2282 /* Pods_BarCodeSvannerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF716C748A70E831B35E83B /* Pods_BarCodeSvannerDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		496EA433204F309A00C2F94A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		496EA436204F309A00C2F94A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		496EA438204F309A00C2F94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B24EBC305B0A7905B8EF8A9 /* Pods-BarCodeSvannerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeSvannerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarCodeSvannerDemo/Pods-BarCodeSvannerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		5AF716C748A70E831B35E83B /* Pods_BarCodeSvannerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarCodeSvannerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EAAE8F78675B50FADBC857E /* Pods-BarCodeSvannerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeSvannerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarCodeSvannerDemo/Pods-BarCodeSvannerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50E1C78B296A1457DDAC2282 /* Pods_BarCodeSvannerDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24B5ADA457C4702164944566 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EAAE8F78675B50FADBC857E /* Pods-BarCodeSvannerDemo.debug.xcconfig */,
+				4B24EBC305B0A7905B8EF8A9 /* Pods-BarCodeSvannerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		296A59FEFA48F62FBB3F026E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AF716C748A70E831B35E83B /* Pods_BarCodeSvannerDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		496EA420204F309A00C2F94A = {
 			isa = PBXGroup;
 			children = (
 				496EA42B204F309A00C2F94A /* BarCodeSvannerDemo */,
 				496EA42A204F309A00C2F94A /* Products */,
+				24B5ADA457C4702164944566 /* Pods */,
+				296A59FEFA48F62FBB3F026E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 496EA43B204F309A00C2F94A /* Build configuration list for PBXNativeTarget "BarCodeSvannerDemo" */;
 			buildPhases = (
+				AD78A36FBC8D4FA8B04D4C5A /* [CP] Check Pods Manifest.lock */,
 				496EA425204F309A00C2F94A /* Sources */,
 				496EA426204F309A00C2F94A /* Frameworks */,
 				496EA427204F309A00C2F94A /* Resources */,
+				39ECCE08A2365C870FD5F69D /* [CP] Embed Pods Frameworks */,
+				F40ACC65D6C05B845FE509D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39ECCE08A2365C870FD5F69D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BarCodeSvannerDemo/Pods-BarCodeSvannerDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BarCodeSvannerDemo/Pods-BarCodeSvannerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD78A36FBC8D4FA8B04D4C5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BarCodeSvannerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F40ACC65D6C05B845FE509D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BarCodeSvannerDemo/Pods-BarCodeSvannerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		496EA425204F309A00C2F94A /* Sources */ = {
@@ -272,6 +353,7 @@
 		};
 		496EA43C204F309A00C2F94A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EAAE8F78675B50FADBC857E /* Pods-BarCodeSvannerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +369,7 @@
 		};
 		496EA43D204F309A00C2F94A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B24EBC305B0A7905B8EF8A9 /* Pods-BarCodeSvannerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
