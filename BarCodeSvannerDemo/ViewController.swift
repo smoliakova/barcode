@@ -11,6 +11,11 @@ import BarcodeScanner
 
 class ViewController: UIViewController {
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {
@@ -27,7 +32,7 @@ class ViewController: UIViewController {
     }
 }
     
-extension ViewController : BarcodeScannerCodeDelegate {
+extension ViewController: BarcodeScannerCodeDelegate {
             func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
                 controller.dismiss(animated: true, completion: nil)
                guard let url = URL(string: "http://ean13.info/\(code).htm") else
@@ -39,14 +44,7 @@ extension ViewController : BarcodeScannerCodeDelegate {
 
     
     
-    
-/*
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
-*/
+
 
 
